@@ -35,7 +35,7 @@ const Home = () => {
                 <span className='highlight'>memories</span>
               </h1>
               <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras aliquet, risus a iaculis feugiat, quam turpis feugiat nisl, vel interdum arcu erat eu ligula. Nullam et lectus varius, fringilla arcu aliquet, fringilla nisl. Nunc molestie, dui at sodales mattis, augue nisi blandit tellus, id sodales velit felis vel elit. Nam tristique porttitor ipsum, vitae pellentesque justo faucibus sit amet. Mauris nec nunc leo. Donec sed leo ac lacus eleifend fringilla blandit eu ipsum. 
+              Traveling is a timeless pursuit, offering more than just movement from one place to another. In today’s world, it has evolved into a multifaceted experience, shaped by changing preferences and modern innovations. Let’s delve into how contemporary travelers have redefined the essence of exploration and its significance. 
               </p>
             </div>
           </Col>

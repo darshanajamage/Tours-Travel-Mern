@@ -13,7 +13,7 @@ export const register = async (req, res) => {
             username: req.body.username,
             email: req.body.email,
             password: hash,  
-            photo: req.body.photo,
+            photo: req.body.photo || "https://loremfaces.net/96/id/1.jpg",
         })
     
         await newUser.save()
@@ -23,6 +23,7 @@ export const register = async (req, res) => {
             message: "Successfully created"
         })
     }catch(err){
+        console.error(err);  // log the error
         res.status(500).json({
             success: false,
             message: "Failed to create. Try again"
@@ -32,14 +33,15 @@ export const register = async (req, res) => {
 
 //User login
 export const login = async (req, res) => {
-
+    console.log(req.body)
     const email = req.body.email
     const password = req.body.password
+    console.log("start login")
 
     try{
 
         const user = await User.findOne({email})
-
+        console.log(user)
         //if user doesnt exist
         if(!user){
             return res.status(404).json({
@@ -53,6 +55,7 @@ export const login = async (req, res) => {
             req.body.password, 
             user.password
         )
+        console.log(checkCorrectPassword)
 
         //if password is wrong
         if(!checkCorrectPassword){
@@ -62,9 +65,10 @@ export const login = async (req, res) => {
             })
         }
 
-        const {password: hashedPassword, role, ...rest} = user._doc
+        const {password: hashedPassword, role, ...rest} = user
 
         //create jwt token
+        console.log(rest)
         const token = jwt.sign(
             {id: user._id, role: user.role},
             process.env.JWT_SECRET_KEY,

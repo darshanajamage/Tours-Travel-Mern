@@ -72,7 +72,7 @@ const TourDetails = () => {
                             <h2>{title}</h2>
                             <div className='d-flex align-items-center gap-5'>
                                 <span className='tour__rating d-flex  align-items-center gap-1'>
-                                <i class="ri-star-fill" style={{color :"var(--secondary-color)"}}></i>{avgRating === 0? null:avgRating}
+                                <i className="ri-star-fill" style={{color :"var(--secondary-color)"}}></i>{avgRating === 0? null:avgRating}
                                 {totalRating === 0? (
                                     "Not rated"
                                 ) : (
@@ -81,15 +81,15 @@ const TourDetails = () => {
                                 </span>
 
                                     <span>
-                                        <i class="ri-map-pin-line" style={{color :"var(--secondary-color)"}}></i>
+                                        <i className="ri-map-pin-line" style={{color :"var(--secondary-color)"}}></i>
                                         {address}
                                     </span>
                             </div>
                             <div className="tour__extra-details">
-                                <span><i class="ri-map-pin-2-line" style={{color :"var(--secondary-color)"}}></i>{city}</span>
-                                <span><i class="ri-money-dollar-circle-line" style={{color :"var(--secondary-color)"}}></i>{price}/per person</span>
-                                <span><i class="ri-map-pin-time-line" style={{color :"var(--secondary-color)"}}></i>{distance} k/m</span>
-                                <span><i class="ri-group-line" style={{color :"var(--secondary-color)"}}></i>{maxGroupSize} people</span>
+                                <span><i className="ri-map-pin-2-line" style={{color :"var(--secondary-color)"}}></i>{city}</span>
+                                <span><i className="ri-money-dollar-circle-line" style={{color :"var(--secondary-color)"}}></i>{price}/per person</span>
+                                <span><i className="ri-map-pin-time-line" style={{color :"var(--secondary-color)"}}></i>{distance} k/m</span>
+                                <span><i className="ri-group-line" style={{color :"var(--secondary-color)"}}></i>{maxGroupSize} people</span>
                             </div>
                             <h5>Description</h5>
                             <p>{description}</p>
@@ -102,19 +102,19 @@ const TourDetails = () => {
                             <Form onSubmit={submitHandler}>
                                 <div className='d-flex align-items-center gap-3 mb-4 rating__group'>
                                     <span onClick={() => setTourRating(1)}>
-                                        1 <i class="ri-star-fill"></i>
+                                        1 <i className="ri-star-fill"></i>
                                     </span>
                                     <span onClick={() => setTourRating(2)}>
-                                        2 <i class="ri-star-fill"></i>
+                                        2 <i className="ri-star-fill"></i>
                                     </span>
                                     <span onClick={() => setTourRating(3)}>
-                                        3 <i class="ri-star-fill"></i>
+                                        3 <i className="ri-star-fill"></i>
                                     </span>
                                     <span onClick={() => setTourRating(4)}>
-                                        4 <i class="ri-star-fill"></i>
+                                        4 <i className="ri-star-fill"></i>
                                     </span>
                                     <span onClick={() => setTourRating(5)}>
-                                        5 <i class="ri-star-fill"></i>
+                                        5 <i className="ri-star-fill"></i>
                                     </span>
                                 </div>
 
@@ -143,7 +143,7 @@ const TourDetails = () => {
                                                         <p> {new Date('01-18-2023').toLocaleDateString("en-US", options)}</p>
                                                     </div>
                                                     <span className="d-flex align-items-center">
-                                                    5 <i class="ri-star-fill" style={{color :"var(--secondary-color)"}}></i>
+                                                    5 <i className="ri-star-fill" style={{color :"var(--secondary-color)"}}></i>
                                                     </span>
                                                 </div>
                                                 <h6>Amazing tour</h6>
